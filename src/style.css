@@ -1,4 +1,6 @@
-
+body{
+  padding: 0;
+}
 .bgimg{
   position: absolute;
   top: 0;
@@ -37,8 +39,6 @@
   border-radius: 5px;
 }
 .list{
-
-  height: 100%;
   grid-column: 1/6;
   grid-row: 3/6;
   padding: 5px;
