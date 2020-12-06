@@ -114,7 +114,7 @@ body{
   border-bottom: 2px solid;
   font-size: 0.8em;
   border-radius: 5px;
-  background-color: #FFFFFFDD;
+  background-color: #FFFFFFaf;
 }
 .js-greetingbox{
   grid-column: 1/5;
