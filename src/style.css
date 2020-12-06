@@ -46,6 +46,11 @@ body{
   padding: 5px;
   border: 5px solid;
   border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(1fr, 110px));
 }
 .logbox{
   grid-column: 1/6;
@@ -59,6 +64,7 @@ body{
   border-radius: 10px;
   background-color: #FFFFFFDD;
   font-size: 1.8em;
+  font-weight: bold;
 }
 .pending, .finished, .nameform{
   display: none;
@@ -101,10 +107,18 @@ body{
 .greetinginput{
   border: none;
   border-bottom: 2px solid;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 .js-greetingbox{
   grid-column: 1/5;
   grid-row: 2;
   font-size: 2em;
+}
+
+.temp{
+  grid-column: 1;
+  grid-row: 2;
+  width: min-content;
+  height: min-content;
+  text-align: center;
 }

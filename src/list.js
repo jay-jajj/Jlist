@@ -125,7 +125,6 @@ function init() {
         } else {
             mode += 1;
         }
-        console.log(mode)
         listMode(mode)
     });
     loadLocalStorage(pending);

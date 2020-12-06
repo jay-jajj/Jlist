@@ -1,10 +1,10 @@
 const body = document.querySelector("body"),
     btn = document.querySelector(".btn");
 
-const IMG_NUM = 3;
+const IMG_NUM = 4;
 
 
-const COLORS = ["#14FFDA", "#FF50A4", "#3C7EFF"]
+const COLORS = ["#14FFDA", "#FF50A4", "#3C7EFF", "#000000"]
 
 function paintImage(imgNum = 1) {
     const img = document.createElement("img");
@@ -13,7 +13,7 @@ function paintImage(imgNum = 1) {
     body.appendChild(img);
 }
 function getRendomNUM() {
-    const num = Math.floor(Math.random() * 3);
+    const num = Math.floor(Math.random() * IMG_NUM);
     return num;
 }
 

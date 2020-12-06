@@ -52,21 +52,22 @@ function loadCoords() {
 }
 
 function setItem(json) {
-  const wheatherInfo = json.weather[0];
-  const location = document.createElement("div"),
-    temp = document.createElement("div"),
-    icon = document.createElement("div");
-  temp.classList = "temp";
-  icon.classList = "weathericon";
-  location.classList = "locaton";
-  weather.appendChild(temp);
+  console.log(json)
+  const weatherInfo = json.weather[0];
+  const temp = document.createElement("div"),
+    weatherText = document.createElement("div"),
+    icon = document.createElement("img");
+  temp.classList.add("temp");
+  temp.innerText = `${json.main.temp}℃`;
+  icon.src = `http://openweathermap.org/img/wn/${weatherInfo.icon}.png`;
+  weatherText.innerHTML = `${weatherInfo.main}\n${json.name}`;
   weather.appendChild(icon);
-  weather.appendChild(location);
+  weather.appendChild(weatherText);
+  weather.appendChild(temp);
 }
 
 function init() {
-  // loadCoords();
-  askForCoords();
+  loadCoords();
 }
 
 init();
