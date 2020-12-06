@@ -1,4 +1,5 @@
-const body = document.querySelector("body");
+const body = document.querySelector("body"),
+    btn = document.querySelector(".btn");
 
 const IMG_NUM = 3;
 
@@ -18,6 +19,7 @@ function getRendomNUM() {
 
 function setThemeColor(num) {
     body.style.color = COLORS[num];
+    btn.style.color = COLORS[num];
 }
 
 function init() {

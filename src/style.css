@@ -17,13 +17,13 @@ body{
   margin: 0;
 }
 .container{
-  padding-top: 2%;
+  padding: 2%;
   margin: auto;
   width: 95%;
   height: 98%;
   display: grid;
   grid-template-columns: repeat(5, minmax(20%, auto));
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 }
 .clock{
   grid-column: 1/4;
@@ -47,20 +47,50 @@ body{
   border: 5px solid;
   border-radius: 5px;
 }
-.list{
+.logbox{
   grid-column: 1/6;
-  grid-row: 3/6;
+  grid-row: 4/10;
+  margin: 0;
+}
+.list{
+  height: 100%;
   padding: 5px;
   border: 5px solid;
   border-radius: 10px;
   background-color: #FFFFFFDD;
+  font-size: 1.8em;
 }
-.log{
-}
-
-.pending, .finished{
+.pending, .finished, .nameform{
   display: none;
 }
 .showing{
   display: block;
 }
+.todo{
+  font-size: 2em;
+  grid-column: 1/5;
+  grid-row: 3;
+  margin: 0;
+  padding: 0;
+  /* justify-content: center; */
+  align-items: center;
+}
+.btn{ 
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 5;
+  grid-row: 3;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid;
+  width: min-content;
+  height: min-content;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.todoinput{
+  border: none;
+  border-bottom: 2px solid;
+  font-size: 0.8em;
+}
+

@@ -15,27 +15,39 @@
             <div class="js-time time">00/00</div>
             <div class="js-date date">00/00</div>
         </div>
-        <div class="js-weather weather">
-        </div>
-        <!-- <div class="js-greetingbox">
-            <form action="">
+        <div class="js-weather weather"></div>
+        <div class="js-greetingbox">
+            <div class="greeting"></div>
+            <div class="name"></div>
+            <form action="" class="nameform">
                 <input type="text" placeholder="What's your name?">
             </form>
-        </div> -->
-        <div class="js-logbox log">
-            <form action="">
-                <input type="text" placeholder="Write your todo!">
+        </div>
+        <div class="todo">
+            <form class="js-todoform" action="">
+                <span>▶</span> <input class="todoinput" type="text" placeholder="Write your todo!" size=15>
             </form>
-            <span class="js-btn"></span>
         </div>
-        <div class="js-pending list pending">
-            <ul></ul>
+        <button class="btn">⇆</button>
+
+        <div class="js-logbox logbox">
+            <div class="js-pending list pending">
+                <ul></ul>
+            </div>
+            <div class="js-finished list finished">
+                <ul></ul>
+            </div>
         </div>
-        <div class="js-finished list finished">
-            <ul></ul>
-        </div>
+
     </div>
 
+    </div>
+
+
+
+
+
+    <script src="src/greeting.js"></script>
     <script src="src/list.js"></script>
     <script src="src/clock.js"></script>
     <script src="src/weather.js"></script>

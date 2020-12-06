@@ -1,14 +1,14 @@
-
 const logbox = document.querySelector(".js-logbox"),
-    todoForm = logbox.querySelector("form"),
+    todoForm = document.querySelector(".js-todoform"),
     input = todoForm.querySelector("input"),
     divPending = document.querySelector("div.js-pending"),
     pendingList = divPending.querySelector("ul"),
     divFinished = document.querySelector("div.js-finished"),
     finishedList = divFinished.querySelector("ul"),
-    changeBtn = logbox.querySelector(".js-btn");
+    listBtn = document.querySelector(".btn");
 
-const SHOWING_CL = "showing";
+const SHOWING_CL = "showing",
+    BTN_CL = "btn";
 
 const pending = {
     imo: "✅",
@@ -27,11 +27,13 @@ const pending = {
 
 function paintList(text, list) {
     const li = document.createElement("li"),
-        btn1 = document.createElement("button"),
-        btn2 = document.createElement("button");
+        btn1 = document.createElement("span"),
+        btn2 = document.createElement("span");
     const newId = list.array.length + 1;
     li.innerText = text;
     li.id = newId;
+    // btn1.classList.add(BTN_CL);
+    // btn2.classList.add(BTN_CL);
     btn1.innerHTML = "❌";
     btn1.addEventListener("click", function (event) {
         handleDelete(event, list);
@@ -114,8 +116,18 @@ function listMode(num = 1) {
 
 }
 
+let mode = 1;
 function init() {
     listMode();
+    listBtn.addEventListener("click", function (event) {
+        if (mode > 1) {
+            mode = 1;
+        } else {
+            mode += 1;
+        }
+        console.log(mode)
+        listMode(mode)
+    });
     loadLocalStorage(pending);
     loadLocalStorage(finished);
     todoForm.addEventListener("submit", handleSubmit);
