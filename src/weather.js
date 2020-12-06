@@ -54,16 +54,18 @@ function loadCoords() {
 function setItem(json) {
   console.log(json)
   const weatherInfo = json.weather[0];
-  const temp = document.createElement("div"),
+  const info = document.createElement("div"),
     weatherText = document.createElement("div"),
     icon = document.createElement("img");
-  temp.classList.add("temp");
-  temp.innerText = `${json.main.temp}℃`;
+  info.classList.add("info");
+  icon.classList.add("icon");
+  info.innerText = `${json.name}\n${json.main.temp}℃`
+  weatherText.classList.add("weathertext");
   icon.src = `http://openweathermap.org/img/wn/${weatherInfo.icon}.png`;
-  weatherText.innerHTML = `${weatherInfo.main}\n${json.name}`;
+  weatherText.innerHTML = `${weatherInfo.description}`;
   weather.appendChild(icon);
+  weather.appendChild(info);
   weather.appendChild(weatherText);
-  weather.appendChild(temp);
 }
 
 function init() {
