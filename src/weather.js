@@ -52,7 +52,6 @@ function loadCoords() {
 }
 
 function setItem(json) {
-  console.log(json)
   const weatherInfo = json.weather[0];
   const info = document.createElement("div"),
     weatherText = document.createElement("div"),

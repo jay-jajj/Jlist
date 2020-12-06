@@ -10,6 +10,7 @@ const USER_LS = "currentUser",
 function getTime() {
     const date = new Date();
     const hours = parseInt(date.getHours());
+    console.log(hours);
     let time = "Welcome!";
     if (hours < 12) {
         time = "Good morning!";
@@ -42,8 +43,10 @@ function askForname() {
 }
 
 function paintGreeting(name) {
-    const greet = getTime();
-
+    let greet = getTime();
+    if (greet === undefined) {
+        greet = "Welcome!";
+    }
     nameForm.classList.remove(SHOW_CL);
     greeting.classList.add(SHOW_CL);
     greeting.innerText = `${greet}  ${name}`;
