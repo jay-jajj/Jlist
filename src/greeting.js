@@ -42,10 +42,14 @@ function askForname() {
 }
 
 function paintGreeting(name) {
-    const greet = getTime();
-    nameForm.classList.remove(SHOW_CL);
-    greeting.classList.add(SHOW_CL);
-    greeting.innerText = `${greet}  ${name}`;
+    const greet = getTime().then(
+        function () {
+            nameForm.classList.remove(SHOW_CL);
+            greeting.classList.add(SHOW_CL);
+            greeting.innerText = `${greet}  ${name}`;
+        }
+    )
+
 }
 
 function loadName() {
