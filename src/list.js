@@ -1,6 +1,6 @@
 const logbox = document.querySelector(".js-logbox"),
     todoForm = document.querySelector(".js-todoform"),
-    input = todoForm.querySelector("input"),
+    input = todoForm.querySelector(".todoinput"),
     divPending = document.querySelector("div.js-pending"),
     pendingList = divPending.querySelector("ul"),
     divFinished = document.querySelector("div.js-finished"),

@@ -94,3 +94,17 @@ body{
   font-size: 0.8em;
 }
 
+.greeting{
+  font-weight: bold;
+  text-align: center;
+}
+.greetinginput{
+  border: none;
+  border-bottom: 2px solid;
+  font-size: 0.7em;
+}
+.js-greetingbox{
+  grid-column: 1/5;
+  grid-row: 2;
+  font-size: 2em;
+}
