@@ -127,6 +127,7 @@ body{
   grid-row: 2;
   text-align: justify;
   font-size: 1.15em;
+  overflow: auto;
 }
 
 .icon{
