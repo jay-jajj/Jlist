@@ -4,7 +4,7 @@ const body = document.querySelector("body"),
 const IMG_NUM = 4;
 
 
-const COLORS = ["#00C9C0", "#FF50A4", "#3C7EFF", "#000000"]
+const COLORS = ["#00C9C0", "#FF50A4", "#3C7EFF", "#FFFFFF"]
 
 function getRendomNUM() {
     const num = Math.floor(Math.random() * IMG_NUM);
