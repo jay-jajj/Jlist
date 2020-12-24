@@ -1,3 +1,3 @@
 # Jlist
 
-https://jay-jajj.github.io/main.html
+https://jay-jajj.github.io/Jlist/main.html
